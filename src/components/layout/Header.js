@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown, FileText, Search, User } from "lucide-react";
+import { Menu, X, ChevronDown, FileText, Search, User, UserPlus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -44,10 +44,16 @@ const Header = () => {
                 className="pl-8 bg-sce-gray border-sce-red/30 text-sce-white w-64 focus:border-sce-red transition-colors"
               />
             </div>
-            <Button variant="outline" className="border-sce-red text-sce-white hover:text-sce-red hover:bg-sce-red/10 transition-colors">
-              <User className="mr-2 h-4 w-4" />
-              Войти
-            </Button>
+            <div className="flex gap-2">
+              <Button variant="outline" className="border-sce-red text-sce-white hover:text-sce-red hover:bg-sce-red/10 transition-colors">
+                <User className="mr-2 h-4 w-4" />
+                Войти
+              </Button>
+              <Button className="bg-sce-red hover:bg-sce-darkred text-white transition-colors">
+                <UserPlus className="mr-2 h-4 w-4" />
+                Регистрация
+              </Button>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -97,10 +103,14 @@ const Header = () => {
             >
               О Фонде
             </Link>
-            <div className="mt-4 pt-4 border-t border-sce-red/30">
+            <div className="mt-4 pt-4 border-t border-sce-red/30 flex flex-col gap-2">
               <Button variant="outline" className="w-full border-sce-red text-sce-white hover:text-sce-red hover:bg-sce-red/10 transition-colors">
                 <User className="mr-2 h-4 w-4" />
                 Войти
+              </Button>
+              <Button className="w-full bg-sce-red hover:bg-sce-darkred text-white transition-colors">
+                <UserPlus className="mr-2 h-4 w-4" />
+                Регистрация
               </Button>
             </div>
           </nav>
