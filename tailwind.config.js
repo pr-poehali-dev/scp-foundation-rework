@@ -19,10 +19,10 @@ const config = {
     extend: {
       colors: {
         sce: {
-          blue: "#0047ab",
-          darkblue: "#00287a",
-          gray: "#2c2c2c",
-          lightgray: "#444",
+          red: "#cc0000",
+          darkred: "#990000",
+          gray: "#202020",
+          lightgray: "#333",
           black: "#111",
           white: "#f5f5f5",
         },

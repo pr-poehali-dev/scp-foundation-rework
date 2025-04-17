@@ -7,7 +7,7 @@ import StoriesSection from "@/components/home/StoriesSection";
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white dark:bg-sce-black text-sce-black dark:text-sce-white">
       <Header />
       <main className="flex-grow">
         <Hero />

@@ -13,7 +13,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 220 100% 33%;
+    --primary: 0 100% 40%;
     --primary-foreground: 0 0% 95%;
 
     --secondary: 0 0% 17%;
@@ -22,7 +22,7 @@
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.9%;
 
-    --accent: 220 100% 33%;
+    --accent: 0 100% 40%;
     --accent-foreground: 0 0% 95%;
 
     --destructive: 0 84.2% 60.2%;
@@ -30,7 +30,7 @@
 
     --border: 0 0% 85%;
     --input: 0 0% 85%;
-    --ring: 220 100% 33%;
+    --ring: 0 100% 40%;
 
     --radius: 0.5rem;
   }
@@ -45,7 +45,7 @@
     --popover: 0 0% 7%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 220 100% 33%;
+    --primary: 0 100% 40%;
     --primary-foreground: 0 0% 95%;
 
     --secondary: 0 0% 17%;
@@ -54,7 +54,7 @@
     --muted: 0 0% 17%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 220 100% 33%;
+    --accent: 0 100% 40%;
     --accent-foreground: 0 0% 95%;
 
     --destructive: 0 62.8% 30.6%;
@@ -62,7 +62,7 @@
 
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 220 100% 33%;
+    --ring: 0 100% 40%;
   }
 }
 
@@ -82,7 +82,7 @@
   }
   
   .sce-title {
-    @apply text-sce-blue font-bold;
+    @apply text-sce-red font-bold;
   }
   
   .sce-section {
@@ -90,11 +90,11 @@
   }
   
   .sce-card {
-    @apply bg-card border border-sce-blue/20 rounded-md p-6;
+    @apply bg-card border border-sce-red/20 rounded-md p-6 shadow-md hover:shadow-lg transition-shadow duration-300;
   }
   
   .sce-object-badge {
-    @apply px-3 py-1 rounded text-sm font-medium;
+    @apply px-3 py-1 rounded text-sm font-medium tracking-wide;
   }
   
   .sce-object-safe {
@@ -106,7 +106,7 @@
   }
   
   .sce-object-restricted {
-    @apply bg-sce-blue text-white sce-object-badge;
+    @apply bg-sce-red text-white sce-object-badge;
   }
   
   .sce-object-omega {
@@ -115,5 +115,25 @@
   
   .sce-object-terminus {
     @apply bg-black text-white sce-object-badge;
+  }
+  
+  .sce-gradient-bg {
+    @apply bg-gradient-to-br from-sce-black via-sce-gray to-sce-black;
+  }
+  
+  .sce-button-primary {
+    @apply bg-sce-red hover:bg-sce-darkred text-white font-medium py-2 px-4 rounded transition-colors duration-300;
+  }
+  
+  .sce-button-secondary {
+    @apply border border-sce-red text-sce-red hover:bg-sce-red/10 font-medium py-2 px-4 rounded transition-colors duration-300;
+  }
+  
+  .sce-image-container {
+    @apply overflow-hidden rounded-md border border-sce-red/20;
+  }
+  
+  .sce-image {
+    @apply w-full h-full object-cover transition-transform duration-500 hover:scale-105;
   }
 }
